@@ -307,6 +307,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   var firstHeader = document.querySelector('.scenario-header');
   if (firstHeader) firstHeader.click();
+
+  // Build email at runtime to prevent scraping
+  var u = 'dana.tran2020';
+  var d = 'gmail.com';
+  var e = u + '@' + d;
+  var m = 'mailto:' + e;
+  var navEl = document.getElementById('nav-email');
+  if (navEl) { navEl.href = m; }
+  var heroEl = document.getElementById('hero-email');
+  if (heroEl) { heroEl.href = m; heroEl.textContent = e; }
+  var aboutEl = document.getElementById('about-email-link');
+  if (aboutEl) { aboutEl.href = m; }
+  var aboutLabel = document.getElementById('about-email-label');
+  if (aboutLabel) { aboutLabel.textContent = e; }
+  var footerEl = document.getElementById('footer-email');
+  if (footerEl) { footerEl.href = m; footerEl.textContent = e; }
 });
 </script>
 </head>
@@ -318,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#eaccc9dbdadad1ccc9d3ddd1ccc9dbdbdad1ccc9d3ddd1ccc9dedcd1ccc9dbdbdcd1ccc9dbdbded1ccc9d3ddd1ccc9dbdbdad1ccc9dfdad1ccc9ded2d1ccc9dfdad1ccc9ded2d1ccc9dcded1ccc9dbdad9d1ccc9dbdad3d1ccc9d3ddd1ccc9dbdadfd1ccc9dbdad2d1ccc9dedcd1ccc9d3d3d1ccc9dbdbdbd1ccc9dbdad3d1">Contact</a></li>
+    <li><a href="#" id="nav-email">Contact</a></li>
   </ul>
   <div class="nav-status">
     <div class="nav-dot"></div>
@@ -347,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="hero-meta-divider"></div>
     <div class="hero-meta-item">
       <span class="hero-meta-label">Email</span>
-      <span class="hero-meta-value"><a href="/cdn-cgi/l/email-protection#7c5a5f4d4c4c475a5f454b475a5f4d4d4c475a5f454b475a5f484a475a5f4d4d4a475a5f4d4d48475a5f454b475a5f4d4d4c475a5f494c475a5f4844475a5f494c475a5f4844475a5f4a48475a5f4d4c4f475a5f4d4c45475a5f454b475a5f4d4c49475a5f4d4c44475a5f484a475a5f4545475a5f4d4d4d475a5f4d4c4547" style="text-decoration:underline;text-underline-offset:3px;color:var(--ink)">&#100;&#97;&#110;&#97;&#46;&#116;&#114;&#97;&#110;&#50;&#48;&#50;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></span>
+      <span class="hero-meta-value"><a href="#" id="hero-email" style="text-decoration:underline;text-underline-offset:3px;color:var(--ink)"></a></span>
     </div>
   </div>
 </section>
@@ -627,8 +643,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <p>In a world where AI drives innovation and customers navigate increasingly ambiguous markets, PMMs do the work that bridges that gap — making sure the customer's voice isn't just an input to the process, but the force that drives strategy itself.</p>
     </div>
     <div class="about-links">
-      <a class="about-link" href="/cdn-cgi/l/email-protection#1c3a3f2d2c2c273a3f252b273a3f2d2d2c273a3f252b273a3f282a273a3f2d2d2a273a3f2d2d28273a3f252b273a3f2d2d2c273a3f292c273a3f2824273a3f292c273a3f2824273a3f2a28273a3f2d2c2f273a3f2d2c25273a3f252b273a3f2d2c29273a3f2d2c24273a3f282a273a3f2525273a3f2d2d2d273a3f2d2c2527">
-        <span class="about-link-label">&#100;&#97;&#110;&#97;&#46;&#116;&#114;&#97;&#110;&#50;&#48;&#50;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</span></span>
+      <a class="about-link" href="#" id="about-email-link"><span class="about-link-label"><span id="about-email-label"></span></span></span>
         <span class="about-link-arrow">&#8594;</span>
       </a>
       <a class="about-link" href="https://linkedin.com/in/danatrann" target="_blank">
